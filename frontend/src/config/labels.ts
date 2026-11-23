@@ -25,4 +25,5 @@ export const commonLabels = {
   save: 'Salvar Alterações',
   cancel: 'Cancelar',
   networkError: 'Sem conexão com o servidor',
+  notFound: 'Item não encontrado',
 } as const;
