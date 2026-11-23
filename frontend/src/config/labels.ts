@@ -27,3 +27,7 @@ export const commonLabels = {
   networkError: 'Sem conexão com o servidor',
   notFound: 'Item não encontrado',
 } as const;
+
+export const authLabels = {
+  invalidCredentials: 'E-mail ou senha inválidos',
+} as const;
