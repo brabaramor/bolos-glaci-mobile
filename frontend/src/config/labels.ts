@@ -24,4 +24,5 @@ export const commonLabels = {
   retry: 'Tentar novamente',
   save: 'Salvar Alterações',
   cancel: 'Cancelar',
+  networkError: 'Sem conexão com o servidor',
 } as const;
