@@ -1,2 +1,112 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+/*
+ * Rule: components consume these variables; no raw hex, px or font names inside components.
+ * Docs: http://ionicframework.com/docs/theming/
+ */
+:root {
+  /* marca */
+  --color-pink-600: #db2777;
+  --color-pink-500: #ec4899; /* figma: "Focus: pink-500*/
+  --color-pink-50: #fdf2f8;
+  --color-purple-600: #9333ea;
+  --color-purple-50: #faf5ff;
+  --gradient-brand: linear-gradient(135deg, var(--color-pink-600), var(--color-purple-600));
+
+  /* cores neutras */
+  --color-gray-900: #111827; /* admin header e footer */
+  --color-gray-700: #374151;
+  --color-gray-400: #9ca3af;
+  --color-gray-200: #e5e7eb;
+  --color-white: #ffffff;
+
+  /* cores de Feedback */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  --gradient-success: linear-gradient(135deg, var(--color-success), #059669); 
+
+  /* ---------- Order status badges (background / text) ---------- */
+  --status-new-background: #dbeafe;
+  --status-new-text: #1d4ed8;
+  --status-in-production-background: #fef3c7;
+  --status-in-production-text: #b45309;
+  --status-ready-background: #d1fae5;
+  --status-ready-text: #047857;
+  --status-delivered-background: #f3f4f6;
+  --status-delivered-text: var(--color-gray-700);
+  --status-cancelled-background: #fee2e2;
+  --status-cancelled-text: #b91c1c;
+
+  /* tipografia */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --font-size-h1: 48px; 
+  --font-size-h2: 36px; 
+  --font-size-h3: 24px; 
+  --font-size-h4: 20px; 
+  --font-size-body: 16px; 
+  --font-size-small: 14px; 
+  --font-size-caption: 12px; 
+
+  /* spacing (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /*  formatos  */
+  --radius-md: 8px; /* botoes e campos */
+  --radius-lg: 12px; /* cards */
+  --radius-full: 9999px; /* badges e paginaçao */
+  --border-width-field: 2px;
+
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /*  Ionic bridge  */
+  --ion-font-family: var(--font-body);
+  --ion-background-color: var(--color-white);
+  --ion-background-color-rgb: 255, 255, 255;
+  --ion-text-color: var(--color-gray-900);
+  --ion-text-color-rgb: 17, 24, 39;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --font-size-h1: 28px;
+    --font-size-h2: 24px;
+    --font-size-h3: 20px;
+    --font-size-h4: 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: 600;
+}
