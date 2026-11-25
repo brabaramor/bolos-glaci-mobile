@@ -63,6 +63,7 @@
   --radius-lg: 12px; /* cards */
   --radius-full: 9999px; /* badges e paginaçao */
   --border-width-field: 2px;
+  --border-width-divider: 1px;
 
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);

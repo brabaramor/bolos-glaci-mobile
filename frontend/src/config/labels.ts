@@ -63,3 +63,18 @@ export const homeLabels = {
   callToActionButton: 'Fazer Encomenda',
   noFeatured: 'Em breve, novos destaques aqui.',
 } as const;
+
+export const filterLabels = {
+  filterButton: 'Filtros',
+  activeFilterIndicator: ' (1)',
+  filterTitle: 'Filtrar por categoria',
+  allCategories: 'Todas as categorias',
+} as const;
+
+export const catalogLabels = {
+  title: 'Nosso Catálogo',
+  searchPlaceholder: 'Buscar bolo',
+  sortLabel: 'Ordenar por',
+  noResults: 'Nenhum bolo encontrado. Tente outra busca ou categoria.',
+  availableCount: (count: number): string => (count === 1 ? '1 produto disponível' : `${count} produtos disponíveis`),
+} as const;
