@@ -13,3 +13,8 @@ export function getMinimumDeliveryDate(today: Date = new Date()): string {
   minimumDate.setDate(minimumDate.getDate() + appConfig.orderRules.minimumLeadDays);
   return toIsoDate(minimumDate);
 }
+
+export function formatDate(isoDate: string): string {
+  const [year, month, day] = isoDate.split('-');
+  return `${day}/${month}/${year}`;
+}

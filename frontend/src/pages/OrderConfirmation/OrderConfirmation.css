@@ -1,0 +1,40 @@
+.order-confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-4) var(--space-8);
+}
+
+.order-confirmation__number-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-6) var(--space-4);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.order-confirmation__number-caption {
+  margin: 0;
+  font-size: var(--font-size-caption);
+  color: var(--color-gray-700);
+}
+
+.order-confirmation__number {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  color: var(--color-pink-600);
+}
+
+.order-confirmation__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding-left: var(--space-4);
+  font-size: var(--font-size-caption);
+}
