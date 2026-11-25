@@ -18,3 +18,5 @@ export interface Cake {
   isFeatured: boolean; // aparece no "Destaques da Semana"
   sizePrices: CakeSizePrice[]; // uma entrada por tamanho; preço base = menor tamanho
 }
+
+export type CakeFormInput = Omit<Cake, 'id' | 'imageUrl'>;
