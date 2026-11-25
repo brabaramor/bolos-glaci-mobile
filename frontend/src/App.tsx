@@ -6,6 +6,7 @@ import AppMenu from './components/AppMenu';
 import { appRoutes } from './config/appRoutes';
 import { brandLabels } from './config/labels';
 import { customerMenuId, customerMenuLinks, mainContentId } from './config/navigation';
+import Catalog from './pages/Catalog/Catalog';
 import Home from './pages/Home';
 
 /* Core CSS required for Ionic components */
@@ -39,6 +40,7 @@ const App: React.FC = () => (
         links={customerMenuLinks}
       />
       <IonRouterOutlet id={mainContentId}>
+        <Route path={appRoutes.catalog} element={<Catalog />} />
         <Route path={appRoutes.home} element={<Home />} />
         <Route path="/" element={<Navigate to={appRoutes.home} replace />} />
       </IonRouterOutlet>

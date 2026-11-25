@@ -1,0 +1,21 @@
+
+
+.search-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: var(--border-width-divider) solid var(--color-gray-200);
+}
+
+.search-filter-bar__input {
+  flex: 1;
+  --border-color: var(--color-gray-400);
+  --border-radius: var(--radius-md);
+  --highlight-color-focused: var(--color-pink-500);
+  font-size: var(--font-size-small);
+}
+
+.search-filter-bar__filter {
+  flex-shrink: 0;
+}
