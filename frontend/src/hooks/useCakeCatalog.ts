@@ -19,11 +19,7 @@ interface CatalogResponse {
   errorMessage: string | null;
 }
 
-export function useCakeCatalog(
-  search?: string,
-  categoryId?: string,
-  sort?: CakeSortOption,
-): CakeCatalogState {
+export function useCakeCatalog(search?: string, categoryId?: string, sort?: CakeSortOption): CakeCatalogState {
   const [response, setResponse] = useState<CatalogResponse | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
 

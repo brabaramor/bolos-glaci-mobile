@@ -1,5 +1,4 @@
-// Paths relative to appConfig.apiBaseUrl. Services build URLs only from here.
-
+// Paths relative to appConfig.apiBaseUrl. Services build URLs from here.
 export const apiRoutes = {
   // Public (customer)
   cakes: '/cakes',

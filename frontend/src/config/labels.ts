@@ -31,3 +31,35 @@ export const commonLabels = {
 export const authLabels = {
   invalidCredentials: 'E-mail ou senha inválidos',
 } as const;
+
+export const cakeCardLabels = {
+  startingAt: 'A partir de',
+  orderButton: 'Pedir',
+  imagePlaceholder: 'Imagem do bolo em breve',
+  imagePlaceholderIcon: '🎂',
+} as const;
+
+export const brandLabels = {
+  logoIcon: '🎂',
+  openMenu: 'Abrir menu',
+  menuTitle: 'Menu',
+} as const;
+
+export const navigationLabels = {
+  home: 'Início',
+  catalog: 'Catálogo',
+  placeOrder: 'Fazer Encomenda',
+  adminArea: 'Área da Confeiteira',
+} as const;
+
+export const homeLabels = {
+  heroTitle: 'Bolos Artesanais',
+  heroSubtitle: 'Feitos com carinho e ingredientes selecionados para tornar sua ocasião especial ainda mais doce',
+  viewCatalog: 'Ver Catálogo Completo',
+  featuredIcon: '✨',
+  featuredTitle: 'Destaques da Semana',
+  callToActionTitle: 'Pronto para fazer seu pedido?',
+  callToActionDescription: 'Entre em contato conosco e encomende o bolo perfeito para sua ocasião',
+  callToActionButton: 'Fazer Encomenda',
+  noFeatured: 'Em breve, novos destaques aqui.',
+} as const;

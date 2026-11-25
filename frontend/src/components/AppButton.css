@@ -1,0 +1,38 @@
+.app-button {
+  --border-radius: var(--radius-md);
+  --box-shadow: none;
+  margin: 0;
+  text-transform: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+/* Gradient: "Ver Catálogo Completo", "Confirmar" */
+.app-button--primary {
+  --background: var(--gradient-brand);
+  --color: var(--color-white);
+  --border-radius: var(--radius-lg);
+  --box-shadow: var(--shadow-lg);
+  --padding-top: var(--space-4);
+  --padding-bottom: var(--space-4);
+  height: auto;
+  font-size: var(--font-size-body);
+}
+
+/* Solid purple: "Pedir" */
+.app-button--secondary {
+  --background: var(--color-purple-600);
+  --color: var(--color-white);
+}
+
+/* White pill: "Fazer Encomenda" */
+.app-button--light {
+  --background: var(--color-white);
+  --color: var(--color-pink-600);
+  --border-radius: var(--radius-full);
+  --box-shadow: var(--shadow-xl);
+  --padding-top: var(--space-4);
+  --padding-bottom: var(--space-4);
+  height: auto;
+  font-size: var(--font-size-body);
+}
