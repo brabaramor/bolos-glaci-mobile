@@ -113,3 +113,29 @@ export const placeOrderLabels = {
   submitting: 'Enviando...',
   cancel: 'Cancelar',
 } as const;
+
+export const orderFieldLabels = {
+  product: 'Produto',
+  deliveryDate: 'Data de Entrega',
+  customer: 'Cliente',
+  phone: 'Telefone',
+  productName: (cakeName: string, sizeName: string): string => `${cakeName} - ${sizeName}`,
+  dateWithTime: (date: string, time: string): string => `${date} às ${time}`,
+} as const;
+
+export const confirmationLabels = {
+  bannerIcon: '✅',
+  title: 'Pedido Confirmado!',
+  subtitle: 'Recebemos sua encomenda com sucesso',
+  orderNumberCaption: 'Número do pedido',
+  orderNumber: (orderNumber: number): string => `#${orderNumber}`,
+  orderNumberHint: 'Anote este número para acompanhar seu pedido',
+  nextStepsIcon: '📱',
+  nextStepsTitle: 'Próximos Passos',
+  nextSteps: [
+    'Você receberá uma mensagem no WhatsApp confirmando o pedido',
+    'Entraremos em contato 1 dia antes da entrega para confirmar',
+    'Qualquer dúvida, entre em contato conosco pelo WhatsApp',
+  ],
+  backToCatalog: 'Voltar ao Catálogo',
+} as const;

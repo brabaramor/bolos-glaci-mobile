@@ -1,0 +1,25 @@
+.info-list {
+  margin: 0;
+}
+
+.info-list__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: var(--border-width-divider) solid var(--color-gray-200);
+}
+
+.info-list__label {
+  font-size: var(--font-size-small);
+  color: var(--color-gray-700);
+}
+
+.info-list__value {
+  margin: 0;
+  text-align: right;
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  color: var(--color-pink-600);
+}

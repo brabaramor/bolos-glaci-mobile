@@ -35,7 +35,7 @@ function buildMockOrder(input: CreateOrderInput): Order {
     cakeId: cake.id,
     sizeId: size.id,
     cakeName: cake.name,
-    sizeName: size.name,
+    sizeName: size.description,
     price: sizePrice.price,
     deliveryDate: input.deliveryDate,
     preferredTime: input.preferredTime,
