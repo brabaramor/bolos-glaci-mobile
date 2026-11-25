@@ -6,4 +6,7 @@ export const appConfig = {
     phone: import.meta.env.VITE_CONTACT_PHONE,
     socialHandle: import.meta.env.VITE_SOCIAL_HANDLE,
   },
+  orderRules: {
+    minimumLeadDays: 2,
+  },
 } as const;
