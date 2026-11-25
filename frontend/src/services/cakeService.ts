@@ -4,6 +4,7 @@ import { commonLabels, type CakeSortOption } from '../config/labels';
 import type { Paginated } from '../models/api';
 import type { Cake, CakeCategory, CakeFormInput } from '../models/cake';
 import type { CakeSize } from '../models/cakeSize';
+import { getStartingPrice } from '../utils/price';
 
 import { ApiError, request } from './httpClient';
 import { mockCakes, mockCategories, mockSizes } from './mocks/mockData';
@@ -42,10 +43,6 @@ function buildCakeFormData(input: CakeFormInput, imageFile: File | null): FormDa
   return formData;
 }
 
-function getLowestPrice(cake: Cake): number {
-  return Math.min(...cake.sizePrices.map((sizePrice) => sizePrice.price));
-}
-
 // ~~ mock: helpers usados apenas enquanto não houver back-end
 const MOCK_PAGE_SIZE = 3;
 
@@ -60,7 +57,7 @@ function filterMockCakes(cakes: Cake[], search?: string, categoryId?: string): C
 
 function sortMockCakes(cakes: Cake[], sort?: CakeSortOption): Cake[] {
   if (sort === 'price_asc') {
-    return [...cakes].sort((first, second) => getLowestPrice(first) - getLowestPrice(second));
+    return [...cakes].sort((first, second) => getStartingPrice(first) - getStartingPrice(second));
   }
   if (sort === 'popular') {
     return [...cakes].sort((first, second) => Number(second.isFeatured) - Number(first.isFeatured));
