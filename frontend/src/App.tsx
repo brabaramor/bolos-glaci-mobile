@@ -8,6 +8,7 @@ import { brandLabels } from './config/labels';
 import { customerMenuId, customerMenuLinks, mainContentId } from './config/navigation';
 import Catalog from './pages/Catalog/Catalog';
 import Home from './pages/Home';
+import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 
 /* Core CSS required for Ionic components */
 import '@ionic/react/css/core.css';
@@ -40,6 +41,7 @@ const App: React.FC = () => (
         links={customerMenuLinks}
       />
       <IonRouterOutlet id={mainContentId}>
+        <Route path={appRoutes.placeOrder} element={<PlaceOrder />} />
         <Route path={appRoutes.catalog} element={<Catalog />} />
         <Route path={appRoutes.home} element={<Home />} />
         <Route path="/" element={<Navigate to={appRoutes.home} replace />} />

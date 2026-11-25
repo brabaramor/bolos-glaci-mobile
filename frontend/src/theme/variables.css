@@ -24,6 +24,8 @@
   --color-warning: #f59e0b;
   --color-error: #ef4444;
   --color-info: #3b82f6;
+  --color-info-50: #eff6ff;
+  --color-info-800: #1e40af;
   --gradient-success: linear-gradient(135deg, var(--color-success), #059669); 
 
   /* Order status badges (background / text) */
@@ -65,10 +67,12 @@
   --border-width-field: 2px;
   --border-width-divider: 1px;
 
+  /*tamnho de componentes*/
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --size-cake-card-image: 88px;
   --size-header-logo: 32px;
+  --size-banner-icon: 56px;
 
   /*  Ionic bridge  */
   --ion-font-family: var(--font-body);

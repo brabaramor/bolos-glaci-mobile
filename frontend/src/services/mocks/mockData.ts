@@ -62,7 +62,6 @@ export const mockCakes: Cake[] = [
     ],
   },
   {
-    // Hidden cake: appears only in the admin product list.
     id: 'cake-4',
     name: 'Limão Siciliano',
     description: 'Massa cítrica com cobertura de merengue.',
@@ -96,7 +95,7 @@ export const mockOrders: Order[] = [
     customer: {
       name: 'Cliente Exemplo 1',
       phone: '(51) 90000-0001',
-      email: null,
+      email: 'cliente1@exemplo.com',
     },
     createdAt: '2026-11-20T10:30:00Z',
   },
@@ -136,7 +135,7 @@ export const mockOrders: Order[] = [
     customer: {
       name: 'Cliente Exemplo 3',
       phone: '(51) 90000-0003',
-      email: null,
+      email: 'cliente3@exemplo.com',
     },
     createdAt: '2026-11-15T09:00:00Z',
   },
@@ -156,7 +155,7 @@ export const mockOrders: Order[] = [
     customer: {
       name: 'Cliente Exemplo 4',
       phone: '(51) 90000-0004',
-      email: null,
+      email: 'cliente4@exemplo.com',
     },
     createdAt: '2026-11-10T11:00:00Z',
   },
@@ -176,7 +175,7 @@ export const mockOrders: Order[] = [
     customer: {
       name: 'Cliente Exemplo 5',
       phone: '(51) 90000-0005',
-      email: null,
+      email: 'cliente5@exemplo.com',
     },
     createdAt: '2026-11-08T14:00:00Z',
   },

@@ -5,7 +5,7 @@ export type OrderStatus = (typeof ORDER_STATUSES)[number];
 export interface Customer {
   name: string;
   phone: string; // WhatsApp
-  email: string | null; // opcional
+  email: string;
 }
 
 //o que a API retorna (lista, detalhes e telas de confirmaçao)

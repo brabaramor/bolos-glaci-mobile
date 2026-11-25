@@ -78,3 +78,38 @@ export const catalogLabels = {
   noResults: 'Nenhum bolo encontrado. Tente outra busca ou categoria.',
   availableCount: (count: number): string => (count === 1 ? '1 produto disponível' : `${count} produtos disponíveis`),
 } as const;
+
+export const validationLabels = {
+  required: 'Campo obrigatório.',
+  deliveryDateTooSoon: (days: number): string => `Escolha uma data com pelo menos ${days} dias de antecedência.`,
+  invalidPhone: 'Informe um telefone com DDD.',
+  invalidEmail: 'Informe um e-mail válido.',
+  consentRequired: 'É preciso concordar para enviar o pedido.',
+} as const;
+
+export const placeOrderLabels = {
+  bannerIcon: '🎂',
+  title: 'Fazer encomenda',
+  subtitle: 'Preencha os dados abaixo para realizar seu pedido',
+  cakeLabel: 'Escolha o Bolo',
+  cakePlaceholder: 'Selecione o bolo...',
+  sizeLabel: 'Tamanho',
+  sizePlaceholder: 'Selecione o tamanho...',
+  deliveryDateLabel: 'Data de Entrega',
+  preferredTimeLabel: 'Horário Preferencial',
+  notesLabel: 'Observações',
+  notesPlaceholder: 'Ex: decoração especial, mensagem no bolo, restrições alimentares...',
+  customerSectionTitle: 'Seus Dados',
+  nameLabel: 'Nome Completo',
+  namePlaceholder: 'Digite seu nome',
+  phoneLabel: 'Telefone/WhatsApp',
+  phonePlaceholder: '(XX) X XXXX-XXXX',
+  emailLabel: 'E-mail',
+  emailPlaceholder: 'seu@email.com',
+  consentTitle: 'Concordo com o uso dos meus dados',
+  consentDescription:
+    'Seus dados serão utilizados apenas para processamento e contato sobre seu pedido, conforme a LGPD.',
+  submit: 'Confirmar',
+  submitting: 'Enviando...',
+  cancel: 'Cancelar',
+} as const;
