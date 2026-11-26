@@ -139,3 +139,17 @@ export const confirmationLabels = {
   ],
   backToCatalog: 'Voltar ao Catálogo',
 } as const;
+export const adminLoginLabels = {
+  bannerIcon: '🎂',
+  subtitle: 'Painel administrativo',
+  welcomeTitle: 'Bem-vinda de volta!',
+  welcomeText: 'Entre com suas credenciais para acessar o painel',
+  emailLabel: 'E-mail',
+  emailPlaceholder: 'seu@email.com',
+  passwordLabel: 'Senha',
+  passwordPlaceholder: 'Digite sua senha',
+  submit: '🔒 Entrar no Painel',
+  submitting: 'Entrando...',
+  backToSite: '⬅️ Voltar ao site público',
+  secureFooter: (appName: string, year: number): string => `🔒 Conexão segura SSL · ${appName} ${year}`,
+} as const;

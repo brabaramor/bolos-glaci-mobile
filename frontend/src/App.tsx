@@ -10,6 +10,7 @@ import Catalog from './pages/Catalog/Catalog';
 import Home from './pages/Home';
 import OrderConfirmation from './pages/OrderConfirmation/OrderConfirmation';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
+import AdminLogin from './pages/admin/AdminLogin/AdminLogin';
 
 /* Core CSS required for Ionic components */
 import '@ionic/react/css/core.css';
@@ -42,6 +43,8 @@ const App: React.FC = () => (
         links={customerMenuLinks}
       />
       <IonRouterOutlet id={mainContentId}>
+        <Route path={appRoutes.adminLogin} element={<AdminLogin />} />
+
         <Route path={appRoutes.orderConfirmation} element={<OrderConfirmation />} />
         <Route path={appRoutes.placeOrder} element={<PlaceOrder />} />
         <Route path={appRoutes.catalog} element={<Catalog />} />

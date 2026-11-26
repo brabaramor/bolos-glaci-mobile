@@ -8,6 +8,7 @@ export const appRoutes = {
   placeOrderForCake: (cakeId: string) => `/order?cakeId=${cakeId}`,
   adminLogin: '/admin/login',
   orderConfirmation: '/order/confirmation',
+  adminOrders: '/admin/orders',
 } as const;
 
 export interface OrderConfirmationRouteState {
