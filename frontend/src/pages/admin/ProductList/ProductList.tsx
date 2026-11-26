@@ -86,6 +86,10 @@ const ProductList: React.FC = () => {
     });
   };
 
+  const openEditForm = (cake: Cake): void => {
+    router.push(appRoutes.adminProductEdit(cake.id));
+  };
+
   return (
     <IonPage>
       <AppHeader menuId={mainMenuId} variant="admin" title={adminLabels.panelTitle} />
@@ -139,8 +143,8 @@ const ProductList: React.FC = () => {
                   key={cake.id}
                   cake={cake}
                   isBusy={busyCakeId === cake.id}
-                  onView={(selectedCake) => router.push(appRoutes.adminProductView(selectedCake.id))}
-                  onEdit={(selectedCake) => router.push(appRoutes.adminProductEdit(selectedCake.id))}
+                  onView={openEditForm}
+                  onEdit={openEditForm}
                   onToggleVisibility={(selectedCake) => void handleToggleVisibility(selectedCake)}
                   onDelete={handleDelete}
                 />

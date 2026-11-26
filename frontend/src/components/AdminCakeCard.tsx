@@ -30,7 +30,7 @@ const AdminCakeCard: React.FC<AdminCakeCardProps> = ({
     <button
       type="button"
       className="admin-cake-card__open"
-      aria-label={`${adminCakeCardLabels.view}: ${cake.name}`}
+      aria-label={`${adminCakeCardLabels.edit}: ${cake.name}`}
       onClick={() => onView(cake)}
     >
       <CakeImage imageUrl={cake.imageUrl} name={cake.name} />

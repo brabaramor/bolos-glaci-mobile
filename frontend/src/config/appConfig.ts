@@ -9,4 +9,7 @@ export const appConfig = {
   orderRules: {
     minimumLeadDays: 2,
   },
+  productRules: {
+    maxImageSizeMb: 5,
+  },
 } as const;

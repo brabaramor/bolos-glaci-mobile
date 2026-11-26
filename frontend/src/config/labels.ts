@@ -85,6 +85,8 @@ export const validationLabels = {
   invalidPhone: 'Informe um telefone com DDD.',
   invalidEmail: 'Informe um e-mail válido.',
   consentRequired: 'É preciso concordar para enviar o pedido.',
+  invalidPrices: 'Informe um preço maior que zero para todos os tamanhos.',
+  imageTooLarge: (maxSizeMb: number): string => `A imagem deve ter no máximo ${maxSizeMb} MB.`,
 } as const;
 
 export const placeOrderLabels = {
@@ -225,7 +227,6 @@ export const orderDetailLabels = {
 } as const;
 
 export const adminCakeCardLabels = {
-  view: 'Visualizar',
   edit: 'Editar',
   publish: 'Mostrar no catálogo',
   unpublish: 'Ocultar do catálogo',
@@ -253,4 +254,35 @@ export const adminProductsLabels = {
   deletedMessage: 'Produto excluído.',
   publishedMessage: 'Produto visível no catálogo.',
   unpublishedMessage: 'Produto oculto do catálogo.',
+} as const;
+
+export const productFormLabels = {
+  backToList: '← Voltar para lista de produtos',
+  newTitle: 'Novo Produto',
+  editTitle: 'Editar Produto',
+  basicInfoIcon: '🎂',
+  basicInfoTitle: 'Informações do Bolo',
+  nameLabel: 'Nome',
+  namePlaceholder: 'Ex: Red Velvet',
+  descriptionLabel: 'Descrição',
+  descriptionPlaceholder: 'Ex: Massa aveludada com recheio de cream cheese',
+  categoryLabel: 'Categoria',
+  categoryPlaceholder: 'Selecione a categoria...',
+  imageLabel: 'Imagem',
+  chooseImage: 'Escolher imagem',
+  changeImage: 'Trocar imagem',
+  pricesIcon: '💰',
+  pricesTitle: 'Preços por Tamanho',
+  pricePlaceholder: '0,00',
+  visibilityIcon: '👁️',
+  visibilityTitle: 'Exibição',
+  isPublishedLabel: 'Mostrar no catálogo',
+  isFeaturedLabel: 'Destaque da semana',
+  save: 'Salvar Produto',
+  saving: 'Salvando...',
+  cancel: 'Cancelar',
+  createdMessage: 'Produto cadastrado.',
+  updatedMessage: 'Produto atualizado.',
+  currency: 'R$',
+  sizePriceLabel: (sizeName: string, sizeDescription: string): string => `${sizeName} - ${sizeDescription}`,
 } as const;

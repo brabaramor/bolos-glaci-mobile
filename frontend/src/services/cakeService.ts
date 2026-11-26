@@ -130,6 +130,16 @@ export async function fetchAllCakes(query: AdminCakeQuery = {}): Promise<Paginat
   return request<Paginated<Cake>>(`${apiRoutes.adminCakes}${buildCakeQueryString(query)}`);
 }
 
+// Admin version of fetchCakeById: also finds hidden cakes.
+export async function fetchAdminCakeById(cakeId: string): Promise<Cake> {
+  // ~~ mock
+  if (appConfig.useMocks) {
+    return mockDelay(mockCakes[findMockCakeIndex(cakeId)]);
+  }
+  // ~~ fim
+  return request<Cake>(apiRoutes.adminCakeById(cakeId));
+}
+
 export async function createCake(input: CakeFormInput, imageFile: File | null): Promise<Cake> {
   // ~~ mock
   if (appConfig.useMocks) {
