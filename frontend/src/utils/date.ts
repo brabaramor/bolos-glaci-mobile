@@ -22,3 +22,11 @@ export function formatDate(isoDate: string): string {
 export function formatTimestampDate(timestamp: string): string {
   return formatDate(toIsoDate(new Date(timestamp)));
 }
+
+// "2026-11-20T10:30:00Z" -> "07:30" (local time, 24h).
+export function formatTimestampTime(timestamp: string): string {
+  const date = new Date(timestamp);
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  return `${hours}:${minutes}`;
+}

@@ -1,0 +1,14 @@
+.read-only-field {
+  padding: var(--space-3);
+  background: var(--color-gray-50);
+  border: var(--border-width-field) solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-small);
+  color: var(--color-gray-900);
+  white-space: pre-line; 
+}
+
+.read-only-field--highlighted {
+  background: var(--color-error-50);
+  border-color: var(--color-error);
+}

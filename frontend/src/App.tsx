@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import OrderConfirmation from './pages/OrderConfirmation/OrderConfirmation';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import AdminLogin from './pages/admin/AdminLogin/AdminLogin';
+import OrderDetail from './pages/admin/OrderDetail/OrderDetail';
 import OrderList from './pages/admin/OrderList/OrderList';
 
 /* Core CSS required for Ionic components */
@@ -47,6 +48,14 @@ const App: React.FC = () => (
           element={
             <AdminRoute>
               <OrderList />
+            </AdminRoute>
+          }
+        />
+        <Route
+          path={appRoutes.adminOrderDetailPattern}
+          element={
+            <AdminRoute>
+              <OrderDetail />
             </AdminRoute>
           }
         />

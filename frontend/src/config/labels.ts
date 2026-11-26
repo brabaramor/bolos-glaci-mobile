@@ -186,3 +186,40 @@ export const adminOrdersLabels = {
   filterAriaLabel: 'Filtrar pedidos por status',
   emptyList: 'Nenhum pedido encontrado.',
 } as const;
+
+export const whatsAppLabels = {
+  orderMessage: (customerName: string, orderNumber: number, appName: string): string =>
+    `Olá, ${customerName}! Aqui é da ${appName}, sobre o seu pedido #${orderNumber}.`,
+} as const;
+
+export const orderDetailLabels = {
+  backToList: '← Voltar para lista de pedidos',
+  title: (orderNumber: number): string => `Pedido #${orderNumber}`,
+  orderInfoIcon: '📋',
+  orderInfoTitle: 'Informações do Pedido',
+  statusLabel: 'Status do Pedido',
+  productLabel: 'Produto',
+  sizeLabel: 'Tamanho do Bolo',
+  orderDateLabel: 'Data do Pedido',
+  deliveryDateLabel: 'Data da Entrega',
+  customerNotesLabel: 'Observações do Cliente',
+  noCustomerNotes: 'Sem observações',
+  internalNotesLabel: 'Notas Internas',
+  internalNotesPlaceholder: 'Adicione anotações sobre o pedido...',
+  customerIcon: '👤',
+  customerTitle: 'Dados do Cliente',
+  nameLabel: 'Nome',
+  phoneLabel: 'Telefone',
+  emailLabel: 'E-mail',
+  whatsAppButton: '📱 Contatar via WhatsApp',
+  actionsIcon: '⚡',
+  actionsTitle: 'Ações',
+  cancelOrder: 'Cancelar Pedido',
+  saveChanges: 'Salvar Alterações',
+  saving: 'Salvando...',
+  cancelConfirmTitle: 'Cancelar pedido?',
+  cancelConfirmMessage: 'O pedido será marcado como cancelado.',
+  cancelConfirmYes: 'Sim, cancelar',
+  cancelConfirmNo: 'Voltar',
+  savedMessage: 'Alterações salvas.',
+} as const;
