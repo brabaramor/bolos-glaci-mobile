@@ -3,6 +3,7 @@ import type { Cake } from '../models/cake';
 import { formatPrice, getStartingPrice } from '../utils/price';
 
 import AppButton from './AppButton';
+import CakeImage from './CakeImage';
 
 import './CakeCard.css';
 
@@ -14,15 +15,7 @@ interface CakeCardProps {
 // Customer-facing card, shared by Home (featured cakes) and Catalog..
 const CakeCard: React.FC<CakeCardProps> = ({ cake, onOrder }) => (
   <article className="cake-card">
-    <div className="cake-card__media">
-      {cake.imageUrl ? (
-        <img className="cake-card__image" src={cake.imageUrl} alt={cake.name} loading="lazy" />
-      ) : (
-        <span className="cake-card__placeholder" role="img" aria-label={cakeCardLabels.imagePlaceholder}>
-          {cakeCardLabels.imagePlaceholderIcon}
-        </span>
-      )}
-    </div>
+    <CakeImage imageUrl={cake.imageUrl} name={cake.name} />
 
     <div className="cake-card__body">
       <h3 className="cake-card__title">{cake.name}</h3>

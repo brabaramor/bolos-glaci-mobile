@@ -1,5 +1,5 @@
-import { IonContent, IonPage, useIonRouter, useIonViewWillEnter } from '@ionic/react';
-import { useState, useRef } from 'react';
+import { IonContent, IonPage, useIonRouter } from '@ionic/react';
+import { useState } from 'react';
 
 import AppHeader from '../../../components/AppHeader';
 import DataState from '../../../components/DataState';
@@ -10,6 +10,7 @@ import { appRoutes } from '../../../config/appRoutes';
 import { adminLabels, adminOrdersLabels, orderStatusFilterLabels } from '../../../config/labels';
 import { mainMenuId } from '../../../config/navigation';
 import { useAdminOrders } from '../../../hooks/useAdminOrders';
+import { useReloadOnReturn } from '../../../hooks/useReloadOnReturn';
 import { ORDER_STATUSES, type Order, type OrderStatus } from '../../../models/order';
 
 import './OrderList.css';
@@ -27,11 +28,7 @@ const OrderList: React.FC = () => {
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
   const { orders, isLoading, errorMessage, reload } = useAdminOrders(statusFilter === 'all' ? undefined : statusFilter);
 
-  const hasEnteredRef = useRef(false);
-  useIonViewWillEnter(() => {
-    if (hasEnteredRef.current) reload();
-    hasEnteredRef.current = true;
-  });
+  useReloadOnReturn(reload);
 
   const handleOpen = (order: Order): void => {
     router.push(appRoutes.adminOrderDetail(order.id));

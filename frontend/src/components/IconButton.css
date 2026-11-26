@@ -1,0 +1,32 @@
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-icon-button);
+  height: var(--size-icon-button);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-body);
+  cursor: pointer;
+}
+
+.icon-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.icon-button--info {
+  background: var(--color-info);
+  color: var(--color-white);
+}
+
+.icon-button--neutral {
+  background: var(--color-gray-200);
+  color: var(--color-gray-700);
+}
+
+.icon-button--danger {
+  background: var(--color-error);
+  color: var(--color-white);
+}
+

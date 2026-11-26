@@ -13,6 +13,9 @@ export const appRoutes = {
   adminProducts: '/admin/products',
   adminOrderDetail: (orderId: string) => `/admin/orders/${orderId}`,
   adminOrderDetailPattern: '/admin/orders/:orderId',
+  adminProductNew: '/admin/products/new',
+  adminProductView: (cakeId: string) => `/admin/products/${cakeId}`,
+  adminProductEdit: (cakeId: string) => `/admin/products/${cakeId}/edit`,
 } as const;
 
 export interface OrderConfirmationRouteState {
