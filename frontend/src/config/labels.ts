@@ -139,6 +139,7 @@ export const confirmationLabels = {
   ],
   backToCatalog: 'Voltar ao Catálogo',
 } as const;
+
 export const adminLoginLabels = {
   bannerIcon: '🎂',
   subtitle: 'Painel administrativo',
@@ -152,4 +153,11 @@ export const adminLoginLabels = {
   submitting: 'Entrando...',
   backToSite: '⬅️ Voltar ao site público',
   secureFooter: (appName: string, year: number): string => `🔒 Conexão segura SSL · ${appName} ${year}`,
+} as const;
+
+export const adminLabels = {
+  panelTitle: 'Painel Administrativo',
+  orders: 'Pedidos',
+  products: 'Produtoss',
+  logout: 'Sair',
 } as const;

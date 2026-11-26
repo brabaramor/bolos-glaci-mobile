@@ -7,7 +7,7 @@ import CallToActionFooter from '../components/CallToActionFooter';
 import DataState from '../components/DataState';
 import { appRoutes } from '../config/appRoutes';
 import { homeLabels } from '../config/labels';
-import { customerMenuId } from '../config/navigation';
+import { mainMenuId } from '../config/navigation';
 import { useCakeCatalog } from '../hooks/useCakeCatalog';
 import type { Cake } from '../models/cake';
 
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
-      <AppHeader menuId={customerMenuId} />
+      <AppHeader menuId={mainMenuId} />
       <IonContent>
         <section className="home-hero">
           <h1 className="home-hero__title">{homeLabels.heroTitle}</h1>

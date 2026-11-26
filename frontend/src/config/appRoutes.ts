@@ -9,6 +9,8 @@ export const appRoutes = {
   adminLogin: '/admin/login',
   orderConfirmation: '/order/confirmation',
   adminOrders: '/admin/orders',
+  adminArea: '/admin',
+  adminProducts: '/admin/products',
 } as const;
 
 export interface OrderConfirmationRouteState {
