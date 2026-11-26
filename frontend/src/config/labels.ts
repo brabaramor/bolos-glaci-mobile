@@ -237,3 +237,20 @@ export const paginationLabels = {
   ariaLabel: 'Paginação',
   goToPage: (page: number): string => `Ir para a página ${page}`,
 } as const;
+
+export const adminProductsLabels = {
+  title: 'Gerenciar Produtos',
+  newProduct: '+ Novo',
+  searchPlaceholder: 'Buscar produto...',
+  categoryFilterLabel: 'Filtrar por categoria',
+  allCategories: 'Todos',
+  emptyList: 'Nenhum produto encontrado.',
+  count: (count: number): string => (count === 1 ? '1 produto cadastrado' : `${count} produtos cadastrados`),
+  deleteConfirmTitle: 'Excluir produto?',
+  deleteConfirmMessage: (cakeName: string): string => `"${cakeName}" será removido definitivamente.`,
+  deleteConfirmYes: 'Excluir',
+  deleteConfirmNo: 'Cancelar',
+  deletedMessage: 'Produto excluído.',
+  publishedMessage: 'Produto visível no catálogo.',
+  unpublishedMessage: 'Produto oculto do catálogo.',
+} as const;

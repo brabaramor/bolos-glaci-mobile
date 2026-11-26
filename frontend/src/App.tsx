@@ -13,6 +13,7 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import AdminLogin from './pages/admin/AdminLogin/AdminLogin';
 import OrderDetail from './pages/admin/OrderDetail/OrderDetail';
 import OrderList from './pages/admin/OrderList/OrderList';
+import ProductList from './pages/admin/ProductList/ProductList';
 
 /* Core CSS required for Ionic components */
 import '@ionic/react/css/core.css';
@@ -56,6 +57,14 @@ const App: React.FC = () => (
           element={
             <AdminRoute>
               <OrderDetail />
+            </AdminRoute>
+          }
+        />
+        <Route
+          path={appRoutes.adminProducts}
+          element={
+            <AdminRoute>
+              <ProductList />
             </AdminRoute>
           }
         />

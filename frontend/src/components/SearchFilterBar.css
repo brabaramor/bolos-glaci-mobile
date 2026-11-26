@@ -18,15 +18,26 @@
   box-shadow: var(--shadow-lg);
 }
 
-.search-filter-bar > :not(.search-filter-bar__input) {
-  flex-shrink: 0;
-}
-
 .search-filter-bar__input {
-  flex: 1;
+  flex: 3 1 0;
+  min-width: 0; 
   --border-color: var(--color-gray-400);
   --border-radius: var(--radius-md);
   --highlight-color-focused: var(--color-pink-500);
   font-size: var(--font-size-small);
 }
+
+.search-filter-bar__select {
+  flex: 2 1 0;
+  min-width: 0;
+  --border-color: var(--color-gray-400);
+  --border-radius: var(--radius-md);
+  font-size: var(--font-size-small);
+}
+
+.search-filter-bar__filter {
+  flex-shrink: 0;
+}
+
+
 

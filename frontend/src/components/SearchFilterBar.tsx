@@ -11,10 +11,8 @@ interface SearchFilterBarProps {
   searchText: string;
   searchPlaceholder: string;
   onSearchChange: (searchText: string) => void;
-  // Default filter: a "Filtros" button (catalog).
   onFilterClick?: () => void;
   isFilterActive?: boolean;
-  // Custom filter, such as a select (admin). Replaces the "Filtros" button.
   children?: React.ReactNode;
   variant?: 'divider' | 'card';
 }
@@ -36,7 +34,6 @@ const SearchFilterBar: React.FC<SearchFilterBarProps> = ({
       value={searchText}
       placeholder={searchPlaceholder}
       aria-label={searchPlaceholder}
-      // Waits 400 ms after the last key, so the list does not reload on every letter.
       debounce={400}
       onIonInput={(event) => onSearchChange(event.detail.value ?? '')}
     />
