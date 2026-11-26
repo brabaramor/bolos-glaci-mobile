@@ -223,3 +223,17 @@ export const orderDetailLabels = {
   cancelConfirmNo: 'Voltar',
   savedMessage: 'Alterações salvas.',
 } as const;
+
+export const adminCakeCardLabels = {
+  view: 'Visualizar',
+  edit: 'Editar',
+  publish: 'Mostrar no catálogo',
+  unpublish: 'Ocultar do catálogo',
+  delete: 'Excluir',
+  hiddenTag: 'Oculto no catálogo',
+} as const;
+
+export const paginationLabels = {
+  ariaLabel: 'Paginação',
+  goToPage: (page: number): string => `Ir para a página ${page}`,
+} as const;

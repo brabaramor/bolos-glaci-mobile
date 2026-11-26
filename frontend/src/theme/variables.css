@@ -75,6 +75,7 @@
   --size-cake-card-image: 88px;
   --size-header-logo: 32px;
   --size-banner-icon: 56px;
+  --size-icon-button: 32px;
 
   /*  Ionic bridge  */
   --ion-font-family: var(--font-body);

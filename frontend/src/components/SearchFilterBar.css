@@ -1,11 +1,25 @@
-
-
 .search-filter-bar {
   display: flex;
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-3) var(--space-4);
+}
+
+/* Catalog */
+.search-filter-bar--divider {
   border-bottom: var(--border-width-divider) solid var(--color-gray-200);
+}
+
+/* Admin */
+.search-filter-bar--card {
+  margin: 0 var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.search-filter-bar > :not(.search-filter-bar__input) {
+  flex-shrink: 0;
 }
 
 .search-filter-bar__input {
@@ -16,6 +30,3 @@
   font-size: var(--font-size-small);
 }
 
-.search-filter-bar__filter {
-  flex-shrink: 0;
-}
