@@ -1,0 +1,25 @@
+.filter-chips {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding: var(--space-3) var(--space-4);
+  scrollbar-width: none; /* hides the scrollbar; swiping still works */
+}
+
+.filter-chips__chip {
+  flex-shrink: 0;
+  padding: var(--space-1) var(--space-3);
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--color-gray-200);
+  color: var(--color-gray-900);
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-chips__chip--selected {
+  background: var(--color-pink-600);
+  color: var(--color-white);
+}

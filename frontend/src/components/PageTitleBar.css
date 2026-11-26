@@ -1,0 +1,19 @@
+.page-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-4) 0;
+}
+
+.page-title-bar__title {
+  font-size: var(--font-size-h4);
+  color: var(--color-pink-600);
+}
+
+.page-title-bar__subtitle {
+  margin: 0;
+  font-size: var(--font-size-caption);
+  color: var(--color-gray-400);
+}
+

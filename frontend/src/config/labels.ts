@@ -121,6 +121,7 @@ export const orderFieldLabels = {
   phone: 'Telefone',
   productName: (cakeName: string, sizeName: string): string => `${cakeName} - ${sizeName}`,
   dateWithTime: (date: string, time: string): string => `${date} às ${time}`,
+  orderNumber: (orderNumber: number): string => `#${orderNumber}`,
 } as const;
 
 export const confirmationLabels = {
@@ -158,6 +159,30 @@ export const adminLoginLabels = {
 export const adminLabels = {
   panelTitle: 'Painel Administrativo',
   orders: 'Pedidos',
-  products: 'Produtoss',
+  products: 'Produtos',
   logout: 'Sair',
+} as const;
+
+export const orderCardLabels = {
+  orderDateIcon: '📅',
+  orderDate: 'Pedido:',
+  deliveryDateIcon: '🚚',
+  deliveryDate: 'Entrega:',
+  phoneIcon: '📱',
+  viewDetails: 'Ver Detalhes',
+} as const;
+
+export const orderStatusFilterLabels: Record<OrderStatus | 'all', string> = {
+  all: 'Todos',
+  new: 'Novo',
+  in_production: 'Em produção',
+  ready: 'Pronto',
+  delivered: 'Entregue',
+  cancelled: 'Cancelado',
+};
+
+export const adminOrdersLabels = {
+  title: 'Gerenciar Pedidos',
+  filterAriaLabel: 'Filtrar pedidos por status',
+  emptyList: 'Nenhum pedido encontrado.',
 } as const;

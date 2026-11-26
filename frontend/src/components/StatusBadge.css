@@ -1,0 +1,34 @@
+.status-badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-caption);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-badge--new {
+  background: var(--status-new-background);
+  color: var(--status-new-text);
+}
+
+.status-badge--in_production {
+  background: var(--status-in-production-background);
+  color: var(--status-in-production-text);
+}
+
+.status-badge--ready {
+  background: var(--status-ready-background);
+  color: var(--status-ready-text);
+}
+
+.status-badge--delivered {
+  background: var(--status-delivered-background);
+  color: var(--status-delivered-text);
+}
+
+.status-badge--cancelled {
+  background: var(--status-cancelled-background);
+  color: var(--status-cancelled-text);
+}
+
