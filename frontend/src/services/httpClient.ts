@@ -49,7 +49,7 @@ export async function request<T>(path: string, options: RequestOptions = {}): Pr
     throw new ApiError(commonLabels.networkError, 0);
   }
 
-  if (response.status === 401) {
+  if (response.status === 401 && token) {
     tokenStorage.clear();
     window.location.assign(appRoutes.adminLogin);
   }

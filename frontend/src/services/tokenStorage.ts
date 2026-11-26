@@ -1,4 +1,4 @@
-const TOKEN_KEY = '';
+const TOKEN_KEY = 'bolos-glaci.auth-token';
 
 export const tokenStorage = {
   get: (): string | null => localStorage.getItem(TOKEN_KEY),
