@@ -27,6 +27,7 @@
   --color-info: #3b82f6;
   --color-info-50: #eff6ff;
   --color-info-800: #1e40af;
+  --color-error-50: #fef2f2;
   --gradient-success: linear-gradient(135deg, var(--color-success), #059669); 
 
   /* Order status badges (background / text) */

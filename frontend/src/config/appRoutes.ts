@@ -12,6 +12,7 @@ export const appRoutes = {
   adminArea: '/admin',
   adminProducts: '/admin/products',
   adminOrderDetail: (orderId: string) => `/admin/orders/${orderId}`,
+  adminOrderDetailPattern: '/admin/orders/:orderId',
 } as const;
 
 export interface OrderConfirmationRouteState {

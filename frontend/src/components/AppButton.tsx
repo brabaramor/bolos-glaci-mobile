@@ -6,7 +6,7 @@ import './AppButton.css';
 type IonButtonProps = ComponentProps<typeof IonButton>;
 
 interface AppButtonProps extends IonButtonProps {
-  variant?: 'primary' | 'secondary' | 'light' | 'outline';
+  variant?: 'primary' | 'secondary' | 'light' | 'outline' | 'danger' | 'success';
 }
 
 const AppButton: React.FC<AppButtonProps> = ({ variant = 'primary', className, ...buttonProps }) => (
