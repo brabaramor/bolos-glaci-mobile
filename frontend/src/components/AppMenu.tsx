@@ -10,17 +10,18 @@ import {
   IonToolbar,
 } from '@ionic/react';
 
-import type { MenuLink } from '../config/navigation';
+import type { MenuAction, MenuItem } from '../config/navigation';
 
 interface AppMenuProps {
   menuId: string;
   contentId: string;
   title: string;
-  links: MenuLink[];
+  items: MenuItem[];
+  onAction?: (action: MenuAction) => void;
 }
 
-// Side menu opened by the header's ☰ button. Customer and admin pass their own links.
-const AppMenu: React.FC<AppMenuProps> = ({ menuId, contentId, title, links }) => (
+// Side menu opened by the header's ☰ button. Items either open a screen or trigger an action.
+const AppMenu: React.FC<AppMenuProps> = ({ menuId, contentId, title, items, onAction }) => (
   <IonMenu menuId={menuId} contentId={contentId} side="end" type="overlay">
     <IonHeader>
       <IonToolbar>
@@ -29,12 +30,18 @@ const AppMenu: React.FC<AppMenuProps> = ({ menuId, contentId, title, links }) =>
     </IonHeader>
     <IonContent>
       <IonList>
-        {links.map((link) => (
-          // Closes the menu automatically after a link is tapped.
-          <IonMenuToggle key={link.path} autoHide={false}>
-            <IonItem routerLink={link.path} routerDirection="root" detail={false}>
-              <IonLabel>{link.label}</IonLabel>
-            </IonItem>
+        {items.map((item) => (
+          // Closes the menu automatically after an item is tapped.
+          <IonMenuToggle key={item.label} autoHide={false}>
+            {item.path ? (
+              <IonItem routerLink={item.path} routerDirection="root" detail={false}>
+                <IonLabel>{item.label}</IonLabel>
+              </IonItem>
+            ) : (
+              <IonItem button detail={false} onClick={() => item.action && onAction?.(item.action)}>
+                <IonLabel>{item.label}</IonLabel>
+              </IonItem>
+            )}
           </IonMenuToggle>
         ))}
       </IonList>

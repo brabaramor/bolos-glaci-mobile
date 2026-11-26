@@ -1,4 +1,5 @@
 import { appConfig } from '../config/appConfig';
+import { appRoutes } from '../config/appRoutes';
 import { commonLabels } from '../config/labels';
 
 import { tokenStorage } from './tokenStorage';
@@ -46,6 +47,11 @@ export async function request<T>(path: string, options: RequestOptions = {}): Pr
     });
   } catch {
     throw new ApiError(commonLabels.networkError, 0);
+  }
+
+  if (response.status === 401) {
+    tokenStorage.clear();
+    window.location.assign(appRoutes.adminLogin);
   }
 
   if (!response.ok) {

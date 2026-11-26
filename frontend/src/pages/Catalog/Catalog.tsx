@@ -7,7 +7,7 @@ import DataState from '../../components/DataState';
 import SearchFilterBar from '../../components/SearchFilterBar';
 import { appRoutes } from '../../config/appRoutes';
 import { type CakeSortOption, cakeSortLabels, catalogLabels } from '../../config/labels';
-import { customerMenuId } from '../../config/navigation';
+import { mainMenuId } from '../../config/navigation';
 import { useCakeCatalog } from '../../hooks/useCakeCatalog';
 import { useCakeOptions } from '../../hooks/useCakeOptions';
 import { useCategoryPicker } from '../../hooks/useCategoryPicker';
@@ -35,7 +35,7 @@ const Catalog: React.FC = () => {
 
   return (
     <IonPage>
-      <AppHeader menuId={customerMenuId} />
+      <AppHeader menuId={mainMenuId} />
       <IonContent>
         <SearchFilterBar
           searchText={searchText}
