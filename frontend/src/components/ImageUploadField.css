@@ -1,0 +1,17 @@
+.image-upload-field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: var(--size-cake-card-image);
+}
+
+.image-upload-field .cake-image {
+  height: var(--size-cake-card-image);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.image-upload-field__input {
+  display: none;
+}
+
