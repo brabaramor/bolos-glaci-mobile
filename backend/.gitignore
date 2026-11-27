@@ -2,9 +2,8 @@ node_modules/
 dist/
 .env
 src/generated/
-/src/generated/prisma
 
-# AI-agent skills que o PRISMA CLI pode isntalar automaticamente
+# AI-agent skills que o PRISMA CLI pode instalar automaticamente
 .agents/
 .claude/
 .windsurf/
