@@ -22,11 +22,11 @@ model Category {
 //cada bolo tem que ter um preço por tamanho
 model CakeSize {
   id          String          @id @default(uuid())
-  name        String          @unique 
-  description String 
+  name        String          @unique
+  description String
   sortOrder   Int             @unique @map("sort_order")
   prices      CakeSizePrice[]
-  orders     Order[]
+  orders      Order[]
 
   @@map("cake_sizes")
 }
@@ -76,20 +76,20 @@ model Order {
   status      OrderStatus @default(new)
 
   // If the cake is deleted, the order stays: the id becomes null, the copies below remain
-  cakeId String? @map("cake_id")
-  cake   Cake?   @relation(fields: [cakeId], references: [id], onDelete: SetNull)
-  sizeId String? @map("size_id")
-  size CakeSize? @relation(fields: [sizeId], references: [id], onDelete: SetNull)
+  cakeId String?   @map("cake_id")
+  cake   Cake?     @relation(fields: [cakeId], references: [id], onDelete: SetNull)
+  sizeId String?   @map("size_id")
+  size   CakeSize? @relation(fields: [sizeId], references: [id], onDelete: SetNull)
 
   // Copies taken when the order is placed, to keep the history
   cakeName String  @map("cake_name")
   sizeName String  @map("size_name")
   price    Decimal @db.Decimal(10, 2)
 
-  deliveryDate  DateTime @db.Date @map("delivery_date")
-  preferredTime String?  @map("preferred_time") 
-  customerNotes String   @default("") @db.Text @map("customer_notes")
-  internalNotes String   @default("") @db.Text @map("internal_notes")
+  deliveryDate  DateTime @map("delivery_date") @db.Date
+  preferredTime String?  @map("preferred_time")
+  customerNotes String   @default("") @map("customer_notes") @db.Text
+  internalNotes String   @default("") @map("internal_notes") @db.Text
 
   customerName  String @map("customer_name")
   customerPhone String @map("customer_phone")
@@ -110,9 +110,8 @@ model AdminUser {
   id           String   @id @default(uuid())
   name         String
   email        String   @unique
-  passwordHash String   @map("password_hash") 
+  passwordHash String   @map("password_hash")
   createdAt    DateTime @default(now()) @map("created_at")
 
   @@map("admin_users")
 }
-
