@@ -1,8 +1,5 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
   provider = "prisma-client"
   output   = "../src/generated/prisma"
@@ -11,3 +8,109 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+// Convention: models and fields in camelCase
+// tables and columns in snake_case
+model Category {
+  id    String @id @default(uuid())
+  name  String @unique
+  cakes Cake[]
+
+  @@map("categories")
+}
+
+//cada bolo tem que ter um preço por tamanho
+model CakeSize {
+  id          String          @id @default(uuid())
+  name        String          @unique 
+  description String 
+  sortOrder   Int             @unique @map("sort_order")
+  prices      CakeSizePrice[]
+
+  @@map("cake_sizes")
+}
+
+model Cake {
+  id          String          @id @default(uuid())
+  name        String
+  description String          @db.Text
+  imageUrl    String?         @map("image_url")
+  categoryId  String          @map("category_id")
+  category    Category        @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  isPublished Boolean         @default(true) @map("is_published")
+  isFeatured  Boolean         @default(false) @map("is_featured")
+  sizePrices  CakeSizePrice[]
+  orders      Order[]
+  createdAt   DateTime        @default(now()) @map("created_at")
+  updatedAt   DateTime        @updatedAt @map("updated_at")
+
+  @@index([isPublished])
+  @@map("cakes")
+}
+
+model CakeSizePrice {
+  cakeId String   @map("cake_id")
+  cake   Cake     @relation(fields: [cakeId], references: [id], onDelete: Cascade)
+  sizeId String   @map("size_id")
+  size   CakeSize @relation(fields: [sizeId], references: [id], onDelete: Restrict)
+  price  Decimal  @db.Decimal(10, 2)
+
+  @@id([cakeId, sizeId])
+  @@map("cake_size_prices")
+}
+
+enum OrderStatus {
+  new
+  in_production
+  ready
+  delivered
+  cancelled
+
+  @@map("order_status")
+}
+
+model Order {
+  id          String      @id @default(uuid())
+  orderNumber Int         @unique @default(autoincrement()) @map("order_number")
+  status      OrderStatus @default(new)
+
+  // If the cake is deleted, the order stays: the id becomes null, the copies below remain
+  cakeId String? @map("cake_id")
+  cake   Cake?   @relation(fields: [cakeId], references: [id], onDelete: SetNull)
+  sizeId String? @map("size_id")
+
+  // Copies taken when the order is placed, to keep the history
+  cakeName String  @map("cake_name")
+  sizeName String  @map("size_name")
+  price    Decimal @db.Decimal(10, 2)
+
+  deliveryDate  DateTime @db.Date @map("delivery_date")
+  preferredTime String?  @map("preferred_time") 
+  customerNotes String   @default("") @db.Text @map("customer_notes")
+  internalNotes String   @default("") @db.Text @map("internal_notes")
+
+  customerName  String @map("customer_name")
+  customerPhone String @map("customer_phone")
+  customerEmail String @map("customer_email")
+
+  // LGPD: usuario aceitou o termo de privacidade
+  privacyTermsAcceptedAt DateTime @map("privacy_terms_accepted_at")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@index([createdAt])
+  @@map("orders")
+}
+
+model AdminUser {
+  id           String   @id @default(uuid())
+  name         String
+  email        String   @unique
+  passwordHash String   @map("password_hash") 
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@map("admin_users")
+}
+
