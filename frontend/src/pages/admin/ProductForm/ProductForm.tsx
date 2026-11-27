@@ -20,7 +20,7 @@ import FormField from '../../../components/FormField';
 import ImageUploadField from '../../../components/ImageUploadField';
 import SectionCard from '../../../components/SectionCard';
 import { appRoutes } from '../../../config/appRoutes';
-import { adminLabels, commonLabels, productFormLabels } from '../../../config/labels';
+import { adminLabels, commonLabels, productFormLabels, sizeLabels } from '../../../config/labels';
 import { mainMenuId } from '../../../config/navigation';
 import { useAdminCakeDetail } from '../../../hooks/useAdminCakeDetail';
 import { useCakeOptions } from '../../../hooks/useCakeOptions';
@@ -140,11 +140,11 @@ function ProductFormContent({ cake, sizes, categories }: ProductFormContentProps
 
       <SectionCard icon={productFormLabels.pricesIcon} title={productFormLabels.pricesTitle}>
         {sizes.map((size) => (
-          <FormField key={size.id} label={productFormLabels.sizePriceLabel(size.name, size.description)} isRequired>
+          <FormField key={size.id} label={sizeLabels.fullName(size.name, size.description)} isRequired>
             <IonInput
               fill="outline"
               inputmode="decimal"
-              aria-label={productFormLabels.sizePriceLabel(size.name, size.description)}
+              aria-label={sizeLabels.fullName(size.name, size.description)}
               placeholder={productFormLabels.pricePlaceholder}
               value={formValues.prices[size.id]}
               onIonInput={(event) => updatePrice(size.id, event.detail.value ?? '')}

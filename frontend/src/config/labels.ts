@@ -131,7 +131,6 @@ export const confirmationLabels = {
   title: 'Pedido Confirmado!',
   subtitle: 'Recebemos sua encomenda com sucesso',
   orderNumberCaption: 'Número do pedido',
-  orderNumber: (orderNumber: number): string => `#${orderNumber}`,
   orderNumberHint: 'Anote este número para acompanhar seu pedido',
   nextStepsIcon: '📱',
   nextStepsTitle: 'Próximos Passos',
@@ -284,5 +283,8 @@ export const productFormLabels = {
   createdMessage: 'Produto cadastrado.',
   updatedMessage: 'Produto atualizado.',
   currency: 'R$',
-  sizePriceLabel: (sizeName: string, sizeDescription: string): string => `${sizeName} - ${sizeDescription}`,
+} as const;
+
+export const sizeLabels = {
+  fullName: (sizeName: string, sizeDescription: string): string => `${sizeName} - ${sizeDescription}`,
 } as const;

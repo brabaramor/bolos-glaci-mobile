@@ -8,7 +8,7 @@ import DataState from '../../components/DataState';
 import FormField from '../../components/FormField';
 import PageBanner from '../../components/PageBanner';
 import { type OrderConfirmationRouteState, appRoutes } from '../../config/appRoutes';
-import { placeOrderLabels } from '../../config/labels';
+import { placeOrderLabels, sizeLabels } from '../../config/labels';
 import { useCakeCatalog } from '../../hooks/useCakeCatalog';
 import { useCakeOptions } from '../../hooks/useCakeOptions';
 import { usePlaceOrder } from '../../hooks/usePlaceOrder';
@@ -29,7 +29,7 @@ import './PlaceOrder.css';
 // The price only shows once a cake is chosen
 function getSizeOptionLabel(size: CakeSize, selectedCake?: Cake): string {
   const sizePrice = selectedCake?.sizePrices.find((price) => price.sizeId === size.id);
-  const baseLabel = `${size.name} - ${size.description}`;
+  const baseLabel = sizeLabels.fullName(size.name, size.description);
   return sizePrice ? `${baseLabel} · ${formatPrice(sizePrice.price)}` : baseLabel;
 }
 
