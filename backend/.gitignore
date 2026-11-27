@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+src/generated/
+
+# AI-agent skills que o PRISMA CLI pode instalar automaticamente
+.agents/
+.claude/
+.windsurf/
+skills-lock.json
