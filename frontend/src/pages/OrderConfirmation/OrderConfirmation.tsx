@@ -50,7 +50,7 @@ const OrderConfirmation: React.FC = () => {
         <div className="order-confirmation">
           <div className="order-confirmation__number-box">
             <p className="order-confirmation__number-caption">{confirmationLabels.orderNumberCaption}</p>
-            <p className="order-confirmation__number">{confirmationLabels.orderNumber(order.orderNumber)}</p>
+            <p className="order-confirmation__number">{orderFieldLabels.orderNumber(order.orderNumber)}</p>
             <p className="order-confirmation__number-caption">{confirmationLabels.orderNumberHint}</p>
           </div>
 
