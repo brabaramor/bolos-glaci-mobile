@@ -1,0 +1,32 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-field__label {
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.form-field__required {
+  margin-left: var(--space-1);
+  color: var(--color-pink-600);
+}
+
+.form-field__error {
+  margin: 0;
+  font-size: var(--font-size-caption);
+  color: var(--color-error);
+}
+
+.form-field ion-input,
+.form-field ion-select,
+.form-field ion-textarea {
+  --border-color: var(--color-gray-200);
+  --border-width: var(--border-width-field);
+  --border-radius: var(--radius-md);
+  --highlight-color-focused: var(--color-pink-500);
+  font-size: var(--font-size-small);
+}

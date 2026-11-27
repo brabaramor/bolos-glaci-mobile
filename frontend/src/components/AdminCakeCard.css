@@ -1,0 +1,63 @@
+.admin-cake-card {
+  display: flex;
+  overflow: hidden;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Hidden cakes stay in the list but look faded, so the state is clear at a glance. */
+.admin-cake-card--hidden .cake-image,
+.admin-cake-card--hidden .admin-cake-card__title,
+.admin-cake-card--hidden .admin-cake-card__price {
+  opacity: 0.5;
+}
+
+.admin-cake-card__open {
+  display: flex;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.admin-cake-card__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  padding: var(--space-4);
+}
+
+.admin-cake-card__title {
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  color: var(--color-gray-900);
+  cursor: pointer;
+}
+
+.admin-cake-card__price {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h4);
+  color: var(--color-pink-600);
+}
+
+.admin-cake-card__hidden-tag {
+  font-size: var(--font-size-caption);
+  color: var(--color-gray-700);
+}
+
+.admin-cake-card__actions {
+  display: flex;
+  gap: var(--space-2);
+  align-self: flex-end;
+  margin-top: auto;
+}
+
